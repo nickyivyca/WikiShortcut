@@ -6,19 +6,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dialog_desc" />
+    <LinearLayout android:id="@+id/urlholder"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="64.0dip">
     <EditText
         android:id="@+id/urlend"
         android:imeOptions="actionGo"
         android:singleLine="true"
-        android:layout_width="match_parent"
+        android:layout_weight="1.0"
+        android:layout_width="0dip"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
         android:hint="@string/dialog_hint_title"/>
-    <Button android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/dialog_button_go"
-        android:onClick="gotoURL" />
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_button_go"
+            android:onClick="gotoURL"/>
+      </LinearLayout>
 </LinearLayout>

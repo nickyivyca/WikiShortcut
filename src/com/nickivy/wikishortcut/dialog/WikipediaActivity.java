@@ -42,18 +42,13 @@ public class WikipediaActivity extends Activity{
 		gotoURL();
 	}
 	
-	public void makePancakes(){
-		return;
-	}
 	public void gotoURL(){
 		URLedit = (EditText)findViewById(R.id.urlend);
-		//TODO preferences to switch based on language
+		//TODO preferences to switch based on language, different wikis
 		String address = "http://en.m.wikipedia.org/wiki/";
 		
 		address += URLedit.getText().toString();
 //		address += "Pancakes";
-		
-		//parse string for spaces and replace with 
 		
 		Intent url = new Intent(Intent.ACTION_VIEW);
 		url.setData(Uri.parse(address));
