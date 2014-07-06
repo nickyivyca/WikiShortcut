@@ -48,7 +48,6 @@ public class WikipediaActivity extends Activity{
 		String address = "http://en.m.wikipedia.org/wiki/";
 		
 		address += URLedit.getText().toString();
-//		address += "Pancakes";
 		
 		Intent url = new Intent(Intent.ACTION_VIEW);
 		url.setData(Uri.parse(address));
