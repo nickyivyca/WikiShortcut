@@ -5,5 +5,5 @@
     <string name="dialog_button_go">Go</string>
     <string name="dialog_button_cancel">Cancel</string>
     <string name="dialog_hint_title">Title</string>
-    <string name="dialog_desc">Put in the end of the URL. For example if you were going to the article on pancakes, put "Pancakes." Case sensitive.</string>
+    <string name="dialog_desc">The title of the article. Case sensitive.</string>
 </resources>

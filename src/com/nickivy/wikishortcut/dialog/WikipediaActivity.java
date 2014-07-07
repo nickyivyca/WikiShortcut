@@ -27,15 +27,18 @@ public class WikipediaActivity extends Activity{
 			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 				boolean handled = false;
 				if (actionId == EditorInfo.IME_ACTION_GO){
-//					gotoURL(v.getRootView());
 					gotoURL();
 					handled = true;
 				}
 				return handled;
 			}
 		});
-		
-		
+	}
+	
+	protected void onResume(){
+		URLedit.setText("");
+		super.onResume();
+		//TODO actually make it bring up the keyboard when returning from browser
 	}
 	
 	public void gotoURL(View view){
@@ -52,7 +55,6 @@ public class WikipediaActivity extends Activity{
 		Intent url = new Intent(Intent.ACTION_VIEW);
 		url.setData(Uri.parse(address));
 		startActivity(url);
-		URLedit.setText("");
 	}
 
 }

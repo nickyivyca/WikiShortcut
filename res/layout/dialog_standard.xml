@@ -1,31 +1,30 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
     <TextView android:id="@+id/dialogdesc"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/dialog_desc" />
-    <LinearLayout android:id="@+id/urlholder"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minWidth="64.0dip">
     <EditText
         android:id="@+id/urlend"
         android:imeOptions="actionGo"
         android:singleLine="true"
-        android:layout_weight="1.0"
-        android:layout_width="0dip"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/dialogdesc"
+        android:layout_toLeftOf="@+id/gobutton"
+        android:layout_alignParentLeft="true"
         android:hint="@string/dialog_hint_title"/>
-        <Button android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dialog_button_go"
-            android:onClick="gotoURL"/>
-      </LinearLayout>
-</LinearLayout>
+    <Button
+        android:id="@+id/gobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialogdesc"
+        android:layout_alignParentRight="true"
+        android:text="@string/dialog_button_go"
+        android:onClick="gotoURL"/>
+</RelativeLayout>
