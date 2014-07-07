@@ -6,4 +6,62 @@
     <string name="dialog_button_cancel">Cancel</string>
     <string name="dialog_hint_title">Title</string>
     <string name="dialog_desc">The title of the article. Case sensitive.</string>
+    <string name="langselect_desc">Select language:</string>
+    
+    <string-array name="lang_array">
+        <item>English (en)</item>
+        <item>Nederlands (nl)</item>
+        <item>Deutsch (de)</item>
+        <item>Svenska (sv)</item>
+        <item>Français (fr)</item>
+        <item>Italiano (it)</item>
+        <item>Русский (ru)</item> <!-- Russkiy -->
+        <item>Español (es)</item>
+        <item>Tiếng Việt (vi)</item>
+        <item>Winaray (war)</item>
+        <item>Polski (pl)</item>
+        <item>Sinugboanong (ceb)</item> <!-- Cebuano -->
+        <item>日本語 (ja)</item> <!-- Nihongo -->
+        <item>Português (pt)</item>
+        <item>中文 (zh)</item> <!-- Zhōngwén -->
+        <item>Українська (uk)</item> <!-- Ukrayins’ka -->
+        <item>Català (ca)</item>
+        <item>Norsk [bokmål] (no)</item>
+        <item>فارسی (fa)</item> <!-- Fārsi -->
+        <item>Suomi (fi)</item>
+        <item>Bahasa Indonesia (id)</item>
+        <item>Česky (cs)</item>
+        <item>العربية (ar)</item> <!-- Al-ʿArabīyah -->
+        <item>한국어 (ko)</item> <!-- Hangugeo -->
+        <item>Bahasa Melayu (ms)</item>
+        <item>Magyar (hu)</item>
+        <item>Српски / Srpski (sr)</item>
+        <item>Română (ro)</item>
+        <item>Türkçe (tr)</item>
+        <item>Қазақша / Qazaqşa / قازاقشا (kk)</item>
+        <item>Esperanto (eo)</item>
+        <item>Slovenčina (sk)</item>
+        <item>Dansk (da)</item>
+        <item>Srpskohrvatski / Српскохрватски (sh)</item>
+        <item>Euskara (eu)</item>
+        <item>Lietuvių (lt)</item>
+        <item>Български (bg)</item> <!-- Bulgarski -->
+        <item>עברית (he)</item> <!-- ‘Ivrit -->
+        <item>Hrvatski (hr)</item>
+        <item>Slovenščina (sl)</item>
+        <item>Eesti (et)</item>
+        <item>Հայերեն (hy)</item> <!-- Hayeren -->
+        <item>Volapük (vo)</item>
+        <item>Norsk [nynorsk] (nn)</item>
+        <item>Galego (gl)</item>
+        <item>Simple English (simple)</item>
+        <item>हिन्दी (hi)</item> <!-- Hindī -->
+        <item>Latina (la)</item>
+        <item>Ελληνικά (el)</item> <!-- Ellīniká -->
+        <item>Azərbaycanca (az)</item>
+        <item>Baso Minangkabau (min)</item>
+        <item>Oʻzbekcha (uz)</item>
+        <item>Саха Тыла (sah)</item> <!-- Saxa Tyla -->
+    </string-array>
+
 </resources>

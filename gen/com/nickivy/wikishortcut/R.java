@@ -8,15 +8,22 @@
 package com.nickivy.wikishortcut;
 
 public final class R {
+    public static final class array {
+        /**  Saxa Tyla 
+         */
+        public static final int lang_array=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class drawable {
         public static final int wshortcut=0x7f020000;
     }
     public static final class id {
-        public static final int dialogdesc=0x7f060000;
-        public static final int gobutton=0x7f060002;
-        public static final int urlend=0x7f060001;
+        public static final int dialogdesc=0x7f070002;
+        public static final int gobutton=0x7f070004;
+        public static final int langselect=0x7f070001;
+        public static final int langselectdesc=0x7f070000;
+        public static final int urlend=0x7f070003;
     }
     public static final class layout {
         public static final int dialog_standard=0x7f030000;
@@ -28,6 +35,7 @@ public final class R {
         public static final int dialog_desc=0x7f040005;
         public static final int dialog_hint_title=0x7f040004;
         public static final int dialog_title_wikipedia=0x7f040001;
+        public static final int langselect_desc=0x7f040006;
     }
     public static final class style {
         /** 
@@ -42,6 +50,6 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f060000;
     }
 }

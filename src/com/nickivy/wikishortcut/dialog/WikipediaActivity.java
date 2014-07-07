@@ -8,13 +8,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.view.KeyEvent;
 
 public class WikipediaActivity extends Activity{
 	EditText URLedit;
+	Spinner langselect;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,6 +36,13 @@ public class WikipediaActivity extends Activity{
 				return handled;
 			}
 		});
+
+		langselect = (Spinner) findViewById(R.id.langselect);
+		ArrayAdapter<CharSequence> langadapter = ArrayAdapter.createFromResource(this,
+				R.array.lang_array, android.R.layout.simple_spinner_item);
+		langadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		langselect.setAdapter(langadapter);
+				
 	}
 	
 	protected void onResume(){
@@ -47,14 +57,25 @@ public class WikipediaActivity extends Activity{
 	
 	public void gotoURL(){
 		URLedit = (EditText)findViewById(R.id.urlend);
-		//TODO preferences to switch based on language, different wikis
-		String address = "http://en.m.wikipedia.org/wiki/";
 		
-		address += URLedit.getText().toString();
+		//TODO preferences to switch different wikis
+		//also maybe save these prefs?
+		String address = "https://" + getLangPrefix() + ".m.wikipedia.org/wiki/" + URLedit.getText().toString();
 		
 		Intent url = new Intent(Intent.ACTION_VIEW);
 		url.setData(Uri.parse(address));
 		startActivity(url);
+	}
+	
+	public String getLangPrefix(){
+		langselect = (Spinner) findViewById(R.id.langselect);
+		String langprefix = langselect.getSelectedItem().toString();
+		
+		//url code is stored in the string user selects, so we parse it from there
+		//each url code is surrounded by parentheses
+		langprefix = langprefix.substring(langprefix.indexOf("(") + 1,langprefix.indexOf(")"));
+		
+		return langprefix;		
 	}
 
 }
