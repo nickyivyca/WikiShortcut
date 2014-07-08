@@ -7,6 +7,18 @@
     <string name="dialog_hint_title">Title</string>
     <string name="dialog_desc">The title of the article. Case sensitive.</string>
     <string name="langselect_desc">Select language:</string>
+    <string name="wikiselect_desc">Select wiki:</string>
+    
+    <string-array name="wiki_array">
+        <item>Wikipedia</item>
+        <item>Wiktionary</item>
+        <item>Wikiquote</item>
+        <item>Wikibooks</item>
+        <item>Wikisource</item>
+        <!-- item>Wikispecies</item-->
+        <item>Wikiversity</item>
+        <item>Wikivoyage</item>
+    </string-array>
     
     <string-array name="lang_array">
         <item>English (en)</item>

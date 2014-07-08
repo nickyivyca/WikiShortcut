@@ -5,15 +5,23 @@
     android:paddingRight="8dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp">
+    <TextView android:id="@+id/wikiselectdesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wikiselect_desc" />
+    <Spinner android:id="@+id/wikiselect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wikiselectdesc" />
     <TextView android:id="@+id/langselectdesc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/langselect_desc"  />
+        android:text="@string/langselect_desc"
+        android:layout_below="@id/wikiselect"/>
     <Spinner android:id="@+id/langselect"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/langselectdesc"
-        />
+        android:layout_below="@id/langselectdesc" />
         
     <TextView android:id="@+id/dialogdesc"
         android:layout_width="fill_parent"

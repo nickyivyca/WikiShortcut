@@ -15,9 +15,24 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.view.KeyEvent;
 
+/**
+ * I came up with this idea after countless times of
+ * digging into the URL bar trying to reach a specific
+ * Wikipedia article on an old, slow phone. It took me
+ * until much later to get around to making it.
+ * 
+ * <p>The point of the app is to, instead of going to Wikipedia
+ * and then dealing with searching or editing the URL,
+ * just type the title into a little dialog and press go. 
+ * 
+ * @author Nicky Ivy nickivyca@gmail.com
+ *
+ */
+
 public class WikipediaActivity extends Activity{
 	EditText URLedit;
 	Spinner langselect;
+	Spinner wikiselect;
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,6 +57,12 @@ public class WikipediaActivity extends Activity{
 				R.array.lang_array, android.R.layout.simple_spinner_item);
 		langadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		langselect.setAdapter(langadapter);
+
+		wikiselect = (Spinner) findViewById(R.id.wikiselect);
+		ArrayAdapter<CharSequence> wikiadapter = ArrayAdapter.createFromResource(this,
+				R.array.wiki_array, android.R.layout.simple_spinner_item);
+		wikiadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		wikiselect.setAdapter(wikiadapter);
 				
 	}
 	
@@ -58,9 +79,9 @@ public class WikipediaActivity extends Activity{
 	public void gotoURL(){
 		URLedit = (EditText)findViewById(R.id.urlend);
 		
-		//TODO preferences to switch different wikis
 		//also maybe save these prefs?
-		String address = "https://" + getLangPrefix() + ".m.wikipedia.org/wiki/" + URLedit.getText().toString();
+		//currenly they only persist as long as the app stays in memory
+		String address = "https://" + getLangPrefix() + ".m." + getWiki() + ".org/wiki/" + URLedit.getText().toString();
 		
 		Intent url = new Intent(Intent.ACTION_VIEW);
 		url.setData(Uri.parse(address));
@@ -75,7 +96,18 @@ public class WikipediaActivity extends Activity{
 		//each url code is surrounded by parentheses
 		langprefix = langprefix.substring(langprefix.indexOf("(") + 1,langprefix.indexOf(")"));
 		
-		return langprefix;		
+		return langprefix;
+	}
+	
+	public String getWiki(){
+		wikiselect = (Spinner) findViewById(R.id.wikiselect);
+		String wiki = wikiselect.getSelectedItem().toString();
+		
+		//url code is simply title of wiki except using lowercase w
+		//this will require some more work if wikispecies is ever implemented
+		wiki = wiki.replace("W", "w");
+		
+		return wiki;
 	}
 
 }

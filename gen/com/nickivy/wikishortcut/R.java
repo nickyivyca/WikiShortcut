@@ -11,7 +11,8 @@ public final class R {
     public static final class array {
         /**  Saxa Tyla 
          */
-        public static final int lang_array=0x7f050000;
+        public static final int lang_array=0x7f050001;
+        public static final int wiki_array=0x7f050000;
     }
     public static final class attr {
     }
@@ -19,11 +20,13 @@ public final class R {
         public static final int wshortcut=0x7f020000;
     }
     public static final class id {
-        public static final int dialogdesc=0x7f070002;
-        public static final int gobutton=0x7f070004;
-        public static final int langselect=0x7f070001;
-        public static final int langselectdesc=0x7f070000;
-        public static final int urlend=0x7f070003;
+        public static final int dialogdesc=0x7f070004;
+        public static final int gobutton=0x7f070006;
+        public static final int langselect=0x7f070003;
+        public static final int langselectdesc=0x7f070002;
+        public static final int urlend=0x7f070005;
+        public static final int wikiselect=0x7f070001;
+        public static final int wikiselectdesc=0x7f070000;
     }
     public static final class layout {
         public static final int dialog_standard=0x7f030000;
@@ -36,6 +39,7 @@ public final class R {
         public static final int dialog_hint_title=0x7f040004;
         public static final int dialog_title_wikipedia=0x7f040001;
         public static final int langselect_desc=0x7f040006;
+        public static final int wikiselect_desc=0x7f040007;
     }
     public static final class style {
         /** 
