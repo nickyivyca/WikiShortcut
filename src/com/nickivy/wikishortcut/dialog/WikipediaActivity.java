@@ -48,6 +48,10 @@ public class WikipediaActivity extends Activity{
 					gotoURL();
 					handled = true;
 				}
+				if(event.getKeyCode() == KeyEvent.KEYCODE_ENTER){
+					gotoURL();
+					handled = true;					
+				}
 				return handled;
 			}
 		});
