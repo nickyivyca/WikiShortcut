@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -77,8 +78,8 @@ public class WikipediaActivity extends Activity{
 	
 	protected void onResume(){
 		URLedit.setText("");
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 		super.onResume();
-		//TODO actually make it bring up the keyboard when returning from browser
 	}
 	
 	public void gotoURL(View view){
