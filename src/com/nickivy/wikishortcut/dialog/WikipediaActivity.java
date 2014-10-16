@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
@@ -48,9 +49,13 @@ public class WikipediaActivity extends Activity{
 					gotoURL();
 					handled = true;
 				}
-				if(event.getKeyCode() == KeyEvent.KEYCODE_ENTER){
-					gotoURL();
-					handled = true;					
+				try{
+					if(event.getKeyCode() == KeyEvent.KEYCODE_ENTER){
+						gotoURL();
+						handled = true;
+					}
+				}catch(NullPointerException e){
+					Log.d("WikiShortcut", "keycode null, ignoring");					
 				}
 				return handled;
 			}
